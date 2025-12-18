@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhoomika G - Junior QA & Automation Test Engineer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">Bhoomika G</div>
+            <ul class="nav-menu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="hero" class="hero">
+        <img src="images/profile.jpg.jpeg" alt="Bhoomika G" class="profile-img">
+        <div class="hero-content">
+            <h1>Bhoomika G</h1>
+            <h2>Junior QA & Automation Test Engineer</h2>
+            <p>Manual & Automation Testing | Selenium WebDriver | 2,500+ Test Scenarios | QSpiders Trained</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="#about" class="btn btn-secondary">About Me</a>
+                <a href="Bhoomika_G_resume.pdf" class="btn btn-accent" download>Download Resume</a>
+                <a href="#contact" class="btn btn-primary">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <p>Junior QA & Automation Test Engineer with a full-stack development background, focused on testing web applications end-to-end. Designed 2,500+ test scenarios and 150+ test cases across e-commerce (ShopperStack) and banking (QBank) projects at QSpiders, logging 25+ defects and supporting multiple regression cycles.</p>
+                <p>Currently mastering Selenium WebDriver for entry-level automation roles, with strong fundamentals in manual testing, SQL, and test documentation. Based in Bengaluru and open to junior QA / test engineer opportunities. </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section skills">
+        <div class="container">
+            <h2 class="section-title">Core Competencies</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <i class="fas fa-bug"></i>
+                    <h3>Manual Testing</h3>
+                    <p>Test case design, scenario coverage, functional & regression testing</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-robot"></i>
+                    <h3>Selenium WebDriver</h3>
+                    <p>UI automation basics using Java, locators, waits, and test scripts</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-database"></i>
+                    <h3>SQL & Jira</h3>
+                    <p>Database validation and defect tracking with clear bug reports</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-code"></i>
+                    <h3>Web & API Basics</h3>
+                    <p>Understanding of web apps, APIs, and SDLC / STLC practices</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section projects">
+        <div class="container">
+            <h2 class="section-title">Key Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>ShopperStack E-commerce Testing</h3>
+                    <p>End-to-end testing of Admin, Merchant, and Shopper modules. Created requirements analysis, test plan, scenarios, and 150+ test cases; logged 25+ defects and re-tested fixes. </p>
+                    <a href="https://www.shoppersstack.com/" target="_blank">View Application</a>
+                </div>
+                <div class="project-card">
+                    <h3>QBank Online Banking</h3>
+                    <p>Tested customer and manager web modules using real banking flows. Performed functional and regression testing, documented defects in Jira, and collaborated with developers.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Fitness Tracking System</h3>
+                    <p>MERN stack academic project with focus on feature validation and basic API/UI checks, complementing QA skills with development understanding. </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <p><strong>Bengaluru, India</strong></p>
+                <p>Open to Junior QA / Automation Test Engineer roles</p>
+                <p><i class="fas fa-phone"></i> +91 8123073114 | <i class="fas fa-envelope"></i> bhoomikagangadhar0@gmail.com</p>
+                <p>
+                    <a href="https://linkedin.com/in/bhoomikag37" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a> |
+                    <a href="https://github.com" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
