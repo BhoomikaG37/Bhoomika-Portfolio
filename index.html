@@ -5,12 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bhoomika G | Software Test Engineer</title>
 
-    <!-- Google Fonts & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <!-- Your CSS file -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -32,68 +30,40 @@
 
 <main>
 
-    <!-- HERO -->
+    <!-- HERO – full background + centered card -->
     <section class="hero">
-        <div class="hero-inner">
-            <!-- Left -->
-            <div class="hero-left">
-                <p class="hero-kicker">Software Test Engineer</p>
-                <h1 class="hero-title">
-                    Testing web applications<br>
-                    with a developer’s mindset.
-                </h1>
-                <p class="hero-text">
-                    BCA graduate from Bangalore University with strong manual testing skills,
-                    growing Java &amp; Selenium automation skills, and hands-on experience across
-                    e‑commerce and banking projects.
-                </p>
+        <div class="hero-card">
+            <div class="hero-photo">
+                <img src="profile.jpg.jpeg" alt="Bhoomika G">
+            </div>
+            <h1 class="hero-name">Bhoomika G</h1>
+            <h2 class="hero-role">Software Test Engineer</h2>
+            <p class="hero-line">
+                Manual &amp; Automation • Selenium WebDriver • SQL • E‑commerce &amp; Banking
+            </p>
 
-                <div class="hero-tags">
-                    <span class="tag">Manual &amp; Automation Testing</span>
-                    <span class="tag">Selenium WebDriver</span>
-                    <span class="tag">SQL</span>
-                    <span class="tag">E‑commerce &amp; Banking</span>
+            <div class="hero-metrics">
+                <div class="metric">
+                    <span class="metric-number">2,000+</span>
+                    <span class="metric-label">Test Scenarios</span>
                 </div>
-
-                <div class="hero-actions">
-                    <a href="#projects" class="btn btn-primary">
-                        <i class="fas fa-folder-tree"></i> View QA Projects
-                    </a>
-                    <a href="Bhoomika_G_resume.pdf" class="btn btn-ghost" download>
-                        <i class="fas fa-download"></i> Download Resume
-                    </a>
+                <div class="metric">
+                    <span class="metric-number">200+</span>
+                    <span class="metric-label">Test Cases</span>
                 </div>
-
-                <div class="hero-metrics">
-                    <div class="metric">
-                        <span class="metric-number">2,000+</span>
-                        <span class="metric-label">Test Scenarios</span>
-                    </div>
-                    <div class="metric">
-                        <span class="metric-number">200+</span>
-                        <span class="metric-label">Test Cases</span>
-                    </div>
-                    <div class="metric">
-                        <span class="metric-number">50+</span>
-                        <span class="metric-label">Defects Logged</span>
-                    </div>
+                <div class="metric">
+                    <span class="metric-number">50+</span>
+                    <span class="metric-label">Defects Logged</span>
                 </div>
             </div>
 
-            <!-- Right: Larger profile -->
-            <div class="hero-right">
-                <div class="app-window app-window-profile">
-                    <div class="app-body app-body-center">
-                        <div class="app-photo app-photo-xlarge">
-                            <img src="profile.jpg.jpeg" alt="Bhoomika G">
-                        </div>
-                        <div class="app-info app-info-center">
-                            <p class="app-name">Bhoomika G</p>
-                            <p class="app-role">Software Test Engineer</p>
-                            <p class="app-caption">Manual &amp; Automation • Selenium • SQL</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">
+                    <i class="fas fa-folder-tree"></i> View QA Projects
+                </a>
+                <a href="Bhoomika_G_resume.pdf" class="btn btn-ghost" download>
+                    <i class="fas fa-download"></i> Resume
+                </a>
             </div>
         </div>
     </section>
@@ -110,9 +80,8 @@
                 <p>
                     Gained hands-on experience through multiple web application projects, where I designed
                     over 2,000 test scenarios, authored 200+ detailed test cases, and reported 50+ defects
-                    with clear steps, severity, and priority. Currently focused on strengthening automation
-                    skills while continuing to apply structured manual testing techniques to deliver
-                    reliable, high-quality software.
+                    with clear steps, severity, and priority. Focused on strengthening automation skills
+                    while applying structured manual testing to deliver reliable, high-quality software.
                 </p>
             </div>
             <div class="about-highlights">
@@ -181,7 +150,6 @@
             <h2>Testing Projects</h2>
 
             <div class="project-grid">
-                <!-- ShopperStack -->
                 <article class="project-card">
                     <header>
                         <span class="pill pill-green">E‑commerce</span>
@@ -190,8 +158,8 @@
                     </header>
                     <ul>
                         <li>Prepared requirement analysis and test plan for core e‑commerce modules.</li>
-                        <li>Designed 2,000+ test scenarios and 200+ detailed test cases for signup, login, product search, cart, and orders.</li>
-                        <li>Logged 50+ defects with severity, priority, and evidence; supported re‑testing until closure.</li>
+                        <li>Designed 2,000+ test scenarios and 200+ test cases for signup, login, search, cart, and orders.</li>
+                        <li>Logged 50+ defects with severity, priority, and evidence and supported re‑testing until closure.</li>
                     </ul>
                     <footer>
                         <a href="https://github.com/BhoomikaG37/ShoppersStack" target="_blank" class="link-inline">
@@ -204,7 +172,6 @@
                     </footer>
                 </article>
 
-                <!-- QBank -->
                 <article class="project-card">
                     <header>
                         <span class="pill pill-blue">Banking</span>
@@ -213,15 +180,14 @@
                     </header>
                     <ul>
                         <li>Executed functional and regression tests for account creation, transfers, approvals, and statements.</li>
-                        <li>Created structured test scenarios and test cases focusing on data validation and security‑relevant checks.</li>
-                        <li>Documented defects with clear reproduction steps, expected vs actual behaviour, and retest results.</li>
+                        <li>Created structured test scenarios and cases focusing on data validation and security‑relevant checks.</li>
+                        <li>Documented defects with clear repro steps, expected vs actual behaviour, and retest results.</li>
                     </ul>
                     <footer>
                         <span class="coming-soon">GitHub repo coming soon</span>
                     </footer>
                 </article>
 
-                <!-- Fitness Tracking -->
                 <article class="project-card">
                     <header>
                         <span class="pill pill-purple">MERN</span>
@@ -231,7 +197,7 @@
                     <ul>
                         <li>Validated user registration, workout logging, and progress dashboards across the UI.</li>
                         <li>Designed basic API and UI scenarios to ensure consistent data flow between frontend and backend.</li>
-                        <li>Used this project to bridge development knowledge with strong testing discipline.</li>
+                        <li>Bridged development knowledge with strong testing discipline on this project.</li>
                     </ul>
                     <footer>
                         <a href="#" class="link-inline">
@@ -273,6 +239,7 @@
             </div>
         </div>
     </section>
+
 </main>
 
 <footer class="footer">
@@ -299,6 +266,7 @@
 
 
    
+
 
 
 
