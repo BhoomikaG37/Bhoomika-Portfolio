@@ -15,7 +15,7 @@
     <div class="topbar-inner">
         <div class="brand">
             <span class="brand-dot"></span>
-            <span class="brand-name">BHOOMIKA G</span>
+            <span class="brand-name">Bhoomika G</span>
         </div>
         <nav class="nav">
             <a href="#about">About</a>
@@ -28,42 +28,11 @@
 
 <main>
 
-    <!-- HERO (Profile.run() LEFT, text RIGHT) -->
+    <!-- HERO (split layout) -->
     <section class="hero">
         <div class="hero-inner">
-
-            <!-- LEFT: application-style panel -->
+            <!-- Left -->
             <div class="hero-left">
-                <div class="app-window">
-                    <div class="app-header">
-                        <span class="app-dot red"></span>
-                        <span class="app-dot amber"></span>
-                        <span class="app-dot green"></span>
-                        <span class="app-title">Profile.run()</span>
-                    </div>
-                    <div class="app-body">
-                        <div class="app-photo">
-                            <img src="profile.jpg.jpeg" alt="Bhoomika G">
-                        </div>
-                        <div class="app-info">
-                            <p class="app-name">Bhoomika G</p>
-                            <p class="app-role">Software Test Engineer</p>
-                            <ul class="app-list">
-                     <li><span>Degree</span><strong>BCA – Bangalore University</strong></li>
-                     <li><span>Focus</span><strong>Manual Testing &amp; Selenium Automation</strong></li>
-                     <li><span>Location</span><strong>Bengaluru, India</strong></li>
-                          </ul>
-
-                        </div>
-                    </div>
-                    <div class="app-footer">
-                        <span><i class="fas fa-check-circle"></i> Ready for QA opportunities</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- RIGHT: heading, text, tags, buttons, metrics -->
-            <div class="hero-right hero-right-text">
                 <p class="hero-kicker">Software Test Engineer</p>
                 <h1 class="hero-title">
                     Testing web applications<br>
@@ -107,7 +76,21 @@
                 </div>
             </div>
 
+            <!-- Right: application-style panel -->
+           <div class="hero-right">
+    <div class="app-window app-window-simple">
+        <div class="app-body app-body-center">
+            <div class="app-photo app-photo-large">
+                <img src="profile.jpg.jpeg" alt="Bhoomika G">
+            </div>
+            <div class="app-info app-info-center">
+                <p class="app-name">Bhoomika G</p>
+                <p class="app-role">Software Test Engineer</p>
+                <p class="app-caption">Manual &amp; Automation Testing • Selenium • SQL</p>
+            </div>
         </div>
+    </div>
+</div>
     </section>
 
     <!-- ABOUT -->
@@ -225,12 +208,93 @@
                     </header>
                     <ul>
                         <li>Executed functional and regression tests for account creation, transfers, approvals, and statements.</li>
-                        <li>Created structured test scenarios and test cases focusing on data validation and
+                        <li>Created structured test scenarios and test cases focusing on data validation and security‑relevant checks.</li>
+                        <li>Documented defects with clear reproduction steps, expected vs actual behaviour, and retest results.</li>
+                    </ul>
+                    <footer>
+                        <span class="coming-soon">GitHub repo coming soon</span>
+                    </footer>
+                </article>
 
+                <!-- Fitness Tracking -->
+                <article class="project-card">
+                    <header>
+                        <span class="pill pill-purple">MERN</span>
+                        <h3>Fitness Tracking System</h3>
+                        <p class="project-subtitle">Academic MERN project tested from a QA + developer view.</p>
+                    </header>
+                    <ul>
+                        <li>Validated user registration, workout logging, and progress dashboards across the UI.</li>
+                        <li>Designed basic API and UI scenarios to ensure consistent data flow between frontend and backend.</li>
+                        <li>Used this project to bridge development knowledge with strong testing discipline.</li>
+                    </ul>
+                    <footer>
+                        <!-- replace # with actual repo -->
+                        <a href="#" class="link-inline">
+                            <i class="fab fa-github"></i> GitHub Repo
+                        </a>
+                    </footer>
+                </article>
+            </div>
+        </div>
+    </section>
 
+    <!-- CONTACT -->
+    <section id="contact" class="section section-contact">
+        <div class="section-inner contact-inner">
+            <div>
+                <h2>Let’s Connect</h2>
+                <p>
+                    Open to Software Test Engineer / QA roles where I can design tests, find meaningful
+                    defects, and grow in automation alongside experienced teams.
+                </p>
+                <p class="contact-line">
+                    <i class="fas fa-location-dot"></i> Bengaluru, India
+                </p>
+                <p class="contact-line">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:bhoomikagangadhar0@gmail.com">bhoomikagangadhar0@gmail.com</a>
+                </p>
+                <p class="contact-line">
+                    <i class="fas fa-phone"></i> +91 8123073114
+                </p>
+            </div>
+            <div class="contact-actions">
+                <a href="https://linkedin.com/in/bhoomikag37" target="_blank" class="btn btn-primary wide">
+                    <i class="fab fa-linkedin"></i> LinkedIn Profile
+                </a>
+                <a href="https://github.com/BhoomikaG37" target="_blank" class="btn btn-ghost wide">
+                    <i class="fab fa-github"></i> GitHub Profile
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    © <span id="year"></span> Bhoomika G · Software Test Engineer
+</footer>
+
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const id = this.getAttribute('href');
+            if (id.length > 1) {
+                e.preventDefault();
+                document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
 
 
    
+
 
 
 
