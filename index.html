@@ -11,55 +11,108 @@
 </head>
 <body>
 
-    <!-- Navigation -->
-    <header class="navbar">
-        <div class="nav-inner">
-            <div class="nav-logo">Bhoomika G</div>
-            <nav class="nav-links">
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
-            </nav>
+<header class="topbar">
+    <div class="topbar-inner">
+        <div class="brand">
+            <span class="brand-dot"></span>
+            <span class="brand-name">Bhoomika G</span>
         </div>
-    </header>
+        <nav class="nav">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </div>
+</header>
 
-    <!-- Hero -->
+<main>
+
+    <!-- HERO (split layout) -->
     <section class="hero">
-        <div class="hero-bg-blur hero-bg-blur-1"></div>
-        <div class="hero-bg-blur hero-bg-blur-2"></div>
+        <div class="hero-inner">
+            <!-- Left -->
+            <div class="hero-left">
+                <p class="hero-kicker">Software Test Engineer</p>
+                <h1 class="hero-title">
+                    Testing web applications<br>
+                    with a developer’s mindset.
+                </h1>
+                <p class="hero-text">
+                    BCA graduate from Bangalore University with strong manual testing skills,
+                    growing Java &amp; Selenium automation skills, and hands-on experience across
+                    e‑commerce and banking projects.
+                </p>
 
-        <div class="hero-card">
-            <div class="hero-avatar-wrapper">
-                <img src="profile.jpg.jpeg" alt="Bhoomika G" class="hero-avatar">
+                <div class="hero-tags">
+                    <span class="tag">Manual &amp; Automation Testing</span>
+                    <span class="tag">Selenium WebDriver</span>
+                    <span class="tag">SQL</span>
+                    <span class="tag">E‑commerce &amp; Banking</span>
+                </div>
+
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fas fa-folder-tree"></i> View QA Projects
+                    </a>
+                    <a href="Bhoomika_G_resume.pdf" class="btn btn-ghost" download>
+                        <i class="fas fa-download"></i> Download Resume
+                    </a>
+                </div>
+
+                <div class="hero-metrics">
+                    <div class="metric">
+                        <span class="metric-number">2,000+</span>
+                        <span class="metric-label">Test Scenarios</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-number">200+</span>
+                        <span class="metric-label">Test Cases</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-number">50+</span>
+                        <span class="metric-label">Defects Logged</span>
+                    </div>
+                </div>
             </div>
 
-            <p class="hero-label">Software Test Engineer</p>
-            <h1 class="hero-name">Bhoomika G</h1>
-            <p class="hero-tagline">
-                Manual &amp; Automation Testing • Selenium • SQL • E‑commerce &amp; Banking
-            </p>
-
-            <div class="hero-buttons">
-                <a href="#projects" class="btn btn-primary">
-                    <i class="fas fa-folder-open"></i> View QA Projects
-                </a>
-                <a href="Bhoomika_G_resume.pdf" class="btn btn-outline" download>
-                    <i class="fas fa-download"></i> Download Resume
-                </a>
+            <!-- Right: application-style panel -->
+            <div class="hero-right">
+                <div class="app-window">
+                    <div class="app-header">
+                        <span class="app-dot red"></span>
+                        <span class="app-dot amber"></span>
+                        <span class="app-dot green"></span>
+                        <span class="app-title">Profile.run()</span>
+                    </div>
+                    <div class="app-body">
+                        <div class="app-photo">
+                            <img src="profile.jpg.jpeg" alt="Bhoomika G">
+                        </div>
+                        <div class="app-info">
+                            <p class="app-name">Bhoomika G</p>
+                            <p class="app-role">Software Test Engineer</p>
+                            <ul class="app-list">
+                                <li><span>Location</span><strong>Bengaluru, India</strong></li>
+                                <li><span>Degree</span><strong>BCA – Bangalore University</strong></li>
+                                <li><span>Focus</span><strong>Manual + Selenium Automation</strong></li>
+                                <li><span>Domains</span><strong>E‑commerce, Banking</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="app-footer">
+                        <span><i class="fas fa-check-circle"></i> Ready for QA opportunities</span>
+                    </div>
+                </div>
             </div>
-
-            <p class="hero-meta">
-                BCA – Bangalore University &nbsp;•&nbsp; Bengaluru, India
-            </p>
         </div>
     </section>
 
-    <!-- About -->
-    <section id="about" class="section">
-        <div class="card about-card">
-            <div class="about-left">
-                <h2 class="section-title">About Me</h2>
+    <!-- ABOUT -->
+    <section id="about" class="section section-about">
+        <div class="section-inner two-cols">
+            <div>
+                <h2>About Me</h2>
                 <p>
                     Software Test Engineer with a BCA from Bangalore University, strong fundamentals in
                     manual testing, and a solid foundation in Java and Selenium automation.
@@ -72,167 +125,191 @@
                     reliable, high-quality software.
                 </p>
             </div>
-            <div class="about-right">
-                <div class="stat-card">
-                    <span class="stat-number">2,000+</span>
-                    <span class="stat-label">Test Scenarios</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-number">200+</span>
-                    <span class="stat-label">Test Cases</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-number">50+</span>
-                    <span class="stat-label">Defects Reported</span>
-                </div>
-                <div class="stat-card stat-small">
-                    <span class="stat-number">Domains</span>
-                    <span class="stat-label">E‑commerce, Banking</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills" class="section">
-        <div class="card">
-            <h2 class="section-title">Skills &amp; Tools</h2>
-            <div class="skills-chips">
-                <div class="chip"><i class="fas fa-bug"></i> Manual Testing</div>
-                <div class="chip"><i class="fas fa-list-check"></i> Test Design &amp; Coverage</div>
-                <div class="chip"><i class="fas fa-rotate-right"></i> Regression &amp; Retesting</div>
-                <div class="chip"><i class="fas fa-robot"></i> Java &amp; Selenium WebDriver</div>
-                <div class="chip"><i class="fas fa-database"></i> SQL</div>
-                <div class="chip"><i class="fas fa-toolbox"></i> Jira • Git/GitHub • Excel</div>
-                <div class="chip"><i class="fas fa-globe"></i> Web Apps &amp; APIs Basics</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Timeline -->
-    <section id="projects" class="section">
-        <div class="card">
-            <h2 class="section-title">Testing Projects</h2>
-
-            <div class="timeline">
-                <!-- ShopperStack -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>ShopperStack – E‑commerce Testing</h3>
-                        <p class="timeline-subtitle">Manual Testing · Web · E‑commerce</p>
-                        <ul>
-                            <li>Designed requirement analysis and test plan for Admin, Merchant, and Shopper modules.</li>
-                            <li>Created 2,000+ test scenarios and 200+ detailed test cases for signup, login, search, cart, and order flows.</li>
-                            <li>Logged 50+ defects with clear severity, priority, and evidence; supported re‑testing after fixes.</li>
-                        </ul>
-                        <div class="timeline-links">
-                            <a href="https://github.com/BhoomikaG37/ShoppersStack" target="_blank" class="link-pill">
-                                <i class="fab fa-github"></i> GitHub Repo
-                            </a>
-                            <!-- Replace these once individual files are uploaded -->
-                            <a href="https://github.com/BhoomikaG37/ShoppersStack" target="_blank" class="link-pill">
-                                Test Plan
-                            </a>
-                            <a href="https://github.com/BhoomikaG37/ShoppersStack" target="_blank" class="link-pill">
-                                Test Cases
-                            </a>
-                            <a href="https://github.com/BhoomikaG37/ShoppersStack" target="_blank" class="link-pill">
-                                Bug Report
-                            </a>
-                        </div>
+            <div class="about-highlights">
+                <div class="highlight">
+                    <i class="fas fa-bug"></i>
+                    <div>
+                        <h3>Testing Mindset</h3>
+                        <p>Strong focus on edge cases, negative testing, and clear defect communication.</p>
                     </div>
                 </div>
+                <div class="highlight">
+                    <i class="fas fa-robot"></i>
+                    <div>
+                        <h3>Growing Automation</h3>
+                        <p>Building Selenium WebDriver skills in Java along with page interaction patterns.</p>
+                    </div>
+                </div>
+                <div class="highlight">
+                    <i class="fas fa-diagram-project"></i>
+                    <div>
+                        <h3>Project Ownership</h3>
+                        <p>Comfortable owning test design, execution, and reporting for end‑to‑end flows.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section section-skills">
+        <div class="section-inner">
+            <h2>Skills &amp; Tools</h2>
+
+            <div class="skill-groups">
+                <div class="skill-card">
+                    <h3>Testing</h3>
+                    <ul>
+                        <li>Test case and scenario design</li>
+                        <li>Functional, regression, and re‑testing</li>
+                        <li>STLC, defect lifecycle</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>Automation &amp; Code</h3>
+                    <ul>
+                        <li>Java basics for automation</li>
+                        <li>Selenium WebDriver, locators, waits</li>
+                        <li>Understanding of page interactions</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>Data &amp; Tools</h3>
+                    <ul>
+                        <li>SQL for data validation</li>
+                        <li>Jira-style bug reporting</li>
+                        <li>Git/GitHub, Excel / Google Sheets</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section section-projects">
+        <div class="section-inner">
+            <h2>Testing Projects</h2>
+
+            <div class="project-grid">
+                <!-- ShopperStack -->
+                <article class="project-card">
+                    <header>
+                        <span class="pill pill-green">E‑commerce</span>
+                        <h3>ShopperStack – Manual Testing</h3>
+                        <p class="project-subtitle">End‑to‑end web testing for Admin, Merchant, and Shopper flows.</p>
+                    </header>
+                    <ul>
+                        <li>Prepared requirement analysis and test plan for core e‑commerce modules.</li>
+                        <li>Designed 2,000+ test scenarios and 200+ detailed test cases for signup, login, product search, cart, and orders.</li>
+                        <li>Logged 50+ defects with severity, priority, and evidence; supported re‑testing until closure.</li>
+                    </ul>
+                    <footer>
+                        <a href="https://github.com/BhoomikaG37/ShoppersStack" target="_blank" class="link-inline">
+                            <i class="fab fa-github"></i> GitHub Repo
+                        </a>
+                        <span class="dot-sep">•</span>
+                        <a href="https://github.com/BhoomikaG37/ShoppersStack" target="_blank" class="link-inline">
+                            Test Docs
+                        </a>
+                    </footer>
+                </article>
 
                 <!-- QBank -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>QBank – Online Banking Web App</h3>
-                        <p class="timeline-subtitle">Manual Testing · Web · Banking</p>
-                        <ul>
-                            <li>Tested customer and manager modules for account creation, transactions, approvals, and statements.</li>
-                            <li>Executed functional and regression test cycles using realistic banking scenarios.</li>
-                            <li>Documented defects in a Jira-style format with clear reproduction steps and retest status.</li>
-                        </ul>
-                        <div class="timeline-links">
-                            <!-- Update these URLs when QBank repo/docs are ready -->
-                            <a href="#" class="link-pill disabled">GitHub Repo (coming soon)</a>
-                        </div>
-                    </div>
-                </div>
+                <article class="project-card">
+                    <header>
+                        <span class="pill pill-blue">Banking</span>
+                        <h3>QBank – Online Banking Testing</h3>
+                        <p class="project-subtitle">Customer and manager modules with realistic banking workflows.</p>
+                    </header>
+                    <ul>
+                        <li>Executed functional and regression tests for account creation, transfers, approvals, and statements.</li>
+                        <li>Created structured test scenarios and test cases focusing on data validation and security‑relevant checks.</li>
+                        <li>Documented defects with clear reproduction steps, expected vs actual behaviour, and retest results.</li>
+                    </ul>
+                    <footer>
+                        <span class="coming-soon">GitHub repo coming soon</span>
+                    </footer>
+                </article>
 
                 <!-- Fitness Tracking -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Fitness Tracking System – MERN</h3>
-                        <p class="timeline-subtitle">Academic Project · MERN Stack</p>
-                        <ul>
-                            <li>Validated core flows like registration, workout logging, and progress dashboards.</li>
-                            <li>Created UI and basic API test scenarios to complement development work.</li>
-                            <li>Demonstrated understanding of both development and QA perspectives in the SDLC.</li>
-                        </ul>
-                        <div class="timeline-links">
-                            <!-- Replace with actual GitHub project link -->
-                            <a href="#" class="link-pill">GitHub Repo</a>
-                        </div>
-                    </div>
-                </div>
-
+                <article class="project-card">
+                    <header>
+                        <span class="pill pill-purple">MERN</span>
+                        <h3>Fitness Tracking System</h3>
+                        <p class="project-subtitle">Academic MERN project tested from a QA + developer view.</p>
+                    </header>
+                    <ul>
+                        <li>Validated user registration, workout logging, and progress dashboards across the UI.</li>
+                        <li>Designed basic API and UI scenarios to ensure consistent data flow between frontend and backend.</li>
+                        <li>Used this project to bridge development knowledge with strong testing discipline.</li>
+                    </ul>
+                    <footer>
+                        <!-- replace # with actual repo -->
+                        <a href="#" class="link-inline">
+                            <i class="fab fa-github"></i> GitHub Repo
+                        </a>
+                    </footer>
+                </article>
             </div>
         </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="section">
-        <div class="card contact-card">
-            <h2 class="section-title">Get In Touch</h2>
-            <p class="contact-text">
-                Open to Software Test Engineer / QA roles – happy to discuss opportunities and projects.
-            </p>
-            <p class="contact-text">
-                <i class="fas fa-location-dot"></i> Bengaluru, India
-            </p>
-            <p class="contact-text">
-                <i class="fas fa-envelope"></i> <a href="mailto:bhoomikagangadhar0@gmail.com">bhoomikagangadhar0@gmail.com</a>
-                &nbsp; | &nbsp;
-                <i class="fas fa-phone"></i> +91 8123073114
-            </p>
-            <div class="contact-links">
-                <a href="https://linkedin.com/in/bhoomikag37" target="_blank" class="btn btn-primary">
-                    <i class="fab fa-linkedin"></i> LinkedIn
+    <!-- CONTACT -->
+    <section id="contact" class="section section-contact">
+        <div class="section-inner contact-inner">
+            <div>
+                <h2>Let’s Connect</h2>
+                <p>
+                    Open to Software Test Engineer / QA roles where I can design tests, find meaningful
+                    defects, and grow in automation alongside experienced teams.
+                </p>
+                <p class="contact-line">
+                    <i class="fas fa-location-dot"></i> Bengaluru, India
+                </p>
+                <p class="contact-line">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:bhoomikagangadhar0@gmail.com">bhoomikagangadhar0@gmail.com</a>
+                </p>
+                <p class="contact-line">
+                    <i class="fas fa-phone"></i> +91 8123073114
+                </p>
+            </div>
+            <div class="contact-actions">
+                <a href="https://linkedin.com/in/bhoomikag37" target="_blank" class="btn btn-primary wide">
+                    <i class="fab fa-linkedin"></i> LinkedIn Profile
                 </a>
-                <a href="https://github.com/BhoomikaG37" target="_blank" class="btn btn-outline">
-                    <i class="fab fa-github"></i> GitHub
+                <a href="https://github.com/BhoomikaG37" target="_blank" class="btn btn-ghost wide">
+                    <i class="fab fa-github"></i> GitHub Profile
                 </a>
             </div>
         </div>
     </section>
+</main>
 
-    <footer class="footer">
-        © <span id="year"></span> Bhoomika G · Software Test Engineer
-    </footer>
+<footer class="footer">
+    © <span id="year"></span> Bhoomika G · Software Test Engineer
+</footer>
 
-    <script>
-        // Smooth scroll for internal links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                const targetId = this.getAttribute('href');
-                if (targetId.length > 1) {
-                    e.preventDefault();
-                    document.querySelector(targetId).scrollIntoView({ behavior: 'smooth' });
-                }
-            });
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const id = this.getAttribute('href');
+            if (id.length > 1) {
+                e.preventDefault();
+                document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+            }
         });
+    });
 
-        // Dynamic year
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
 
+
    
+
 
 
 
