@@ -4,296 +4,768 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bhoomika G | Software Test Engineer</title>
-    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* Reset & Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #0a0f1e;
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #1e293b;
+            overflow-x: hidden;
+        }
+
+        /* Full-page section backgrounds */
+        .hero { 
+            background: linear-gradient(rgba(0,10,30,0.9), rgba(0,20,50,0.9)), url('bg-hero.jpg');
+            background-size: cover; 
+            background-position: center; 
+            background-attachment: fixed; 
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+        #about.section-about { 
+            background: linear-gradient(rgba(5,15,40,0.95), rgba(10,25,55,0.95)), url('bg-about.jpg');
+            background-size: cover; 
+            background-position: center; 
+            background-attachment: fixed; 
+            padding: 8rem 0;
+        }
+        #skills.section-skills { 
+            background: linear-gradient(rgba(0,15,35,0.95), rgba(5,20,45,0.95)), url('bg-skills.jpg');
+            background-size: cover; 
+            background-position: center; 
+            background-attachment: fixed; 
+            padding: 8rem 0;
+        }
+        #projects.section-projects { 
+            background: linear-gradient(rgba(10,10,35,0.95), rgba(15,20,50,0.95)), url('bg-projects.jpg');
+            background-size: cover; 
+            background-position: center; 
+            background-attachment: fixed; 
+            padding: 8rem 0;
+        }
+        #contact.section-contact { 
+            background: linear-gradient(rgba(5,10,30,0.95), rgba(10,20,45,0.95)), url('bg-contact.jpg');
+            background-size: cover; 
+            background-position: center; 
+            background-attachment: fixed; 
+            padding: 8rem 0;
+        }
+
+        /* Section cards - light foregrounds */
+        .section-inner, .project-card, .skill-card, .hero-left, .app-window-profile { 
+            background: rgba(248,250,252,0.95); 
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        /* Topbar */
+        .topbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(10,15,30,0.95);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+        .topbar-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: white;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+        .brand-dot {
+            width: 10px;
+            height: 10px;
+            background: #22d3ee;
+            border-radius: 50%;
+        }
+        .nav a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            margin-left: 2rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .nav a:hover {
+            color: #22d3ee;
+        }
+
+        /* Hero Section */
+        .hero-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            padding: 0 2rem;
+            align-items: center;
+        }
+        .hero-left {
+            padding: 3rem;
+            border-radius: 24px;
+        }
+        .hero-kicker {
+            color: #22d3ee;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #ffffff, #e2e8f0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero-text {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #64748b;
+            line-height: 1.7;
+        }
+        .hero-tags {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+            flex-wrap: wrap;
+        }
+        .tag {
+            background: rgba(34,211,238,0.2);
+            color: #0ea5e9;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        .hero-actions {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #22d3ee, #0ea5e9);
+            color: white;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 40px rgba(34,211,238,0.3);
+        }
+        .btn-ghost {
+            background: transparent;
+            color: #334155;
+            border-color: rgba(34,211,238,0.3);
+        }
+        .btn-ghost:hover {
+            background: rgba(34,211,238,0.1);
+            border-color: #22d3ee;
+            color: #0ea5e9;
+        }
+        .hero-metrics {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        .metric {
+            text-align: center;
+        }
+        .metric-number {
+            display: block;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #22d3ee;
+        }
+        .metric-label {
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        /* Hero Right - Larger Profile */
+        .hero-right {
+            display: flex;
+            justify-content: center;
+        }
+        .app-window-profile {
+            background: rgba(255,255,255,0.1);
+            border-radius: 24px;
+            padding: 2.5rem;
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.2);
+            max-width: 320px;
+            width: 100%;
+        }
+        .app-body-center {
+            text-align: center;
+        }
+        .app-photo-xlarge {
+            width: 180px; 
+            height: 180px;
+            margin: 0 auto 1.5rem;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.4);
+            border: 4px solid rgba(34,211,238,0.6);
+        }
+        .app-photo-xlarge img {
+            width: 100%; 
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .app-info-center {
+            margin-top: 1rem;
+        }
+        .app-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+        }
+        .app-role {
+            font-size: 1.1rem;
+            color: #64748b;
+            margin-bottom: 0.5rem;
+        }
+        .app-caption {
+            font-size: 0.9rem;
+            color: #94a3b8;
+            margin: 0;
+        }
+
+        /* General Section Styles */
+        .section {
+            padding: 6rem 0;
+        }
+        .section-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        .section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 4rem;
+            background: linear-gradient(135deg, #ffffff, #e2e8f0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* About */
+        .two-cols {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        .about-highlights {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        .highlight {
+            display: flex;
+            gap: 1.5rem;
+            padding: 2rem;
+            border-radius: 16px;
+        }
+        .highlight i {
+            font-size: 2.5rem;
+            color: #22d3ee;
+            width: 60px;
+            flex-shrink: 0;
+        }
+        .highlight h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: #1e293b;
+        }
+        .highlight p {
+            color: #64748b;
+        }
+
+        /* Skills */
+        .skill-groups {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .skill-card {
+            padding: 2.5rem;
+            border-radius: 20px;
+            height: 100%;
+        }
+        .skill-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: #1e293b;
+        }
+        .skill-card ul {
+            list-style: none;
+        }
+        .skill-card li {
+            padding: 0.75rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: #475569;
+        }
+        .skill-card li:before {
+            content: "▸";
+            color: #22d3ee;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Projects */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        .project-card {
+            padding: 2.5rem;
+            border-radius: 20px;
+            height: 100%;
+            transition: transform 0.3s;
+        }
+        .project-card:hover {
+            transform: translateY(-8px);
+        }
+        .pill {
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+        .pill-green { background: rgba(34,197,94,0.2); color: #16a34a; }
+        .pill-blue { background: rgba(59,130,246,0.2); color: #3b82f6; }
+        .pill-purple { background: rgba(168,85,247,0.2); color: #a855f7; }
+        .project-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: #1e293b;
+        }
+        .project-subtitle {
+            color: #64748b;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+        }
+        .project-card ul {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+        .project-card li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: #475569;
+        }
+        .project-card li:before {
+            content: "✓";
+            color: #22d3ee;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        .link-inline {
+            color: #22d3ee;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .link-inline:hover {
+            text-decoration: underline;
+        }
+        .dot-sep {
+            color: #cbd5e1;
+            margin: 0 0.75rem;
+        }
+        .coming-soon {
+            color: #94a3b8;
+            font-style: italic;
+        }
+
+        /* Contact */
+        .contact-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        .contact-line {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            color: #475569;
+        }
+        .contact-line i {
+            color: #22d3ee;
+            width: 20px;
+        }
+        .contact-line a {
+            color: #334155;
+            text-decoration: none;
+        }
+        .contact-line a:hover {
+            color: #22d3ee;
+        }
+        .wide {
+            width: 100%;
+            justify-content: center;
+            padding: 1.25rem 2rem;
+            font-size: 1.1rem;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            color: rgba(255,255,255,0.7);
+            background: rgba(10,15,30,0.95);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-inner {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 2rem;
+            }
+            .hero-title { font-size: 2.2rem; }
+            .two-cols, .contact-inner { grid-template-columns: 1fr; }
+            .hero-actions { justify-content: center; }
+            .hero-metrics { grid-template-columns: 1fr; }
+            .skill-groups { grid-template-columns: 1fr; }
+            .project-grid { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
 <body>
-
-<header class="topbar">
-    <div class="topbar-inner">
-        <div class="brand">
-            <span class="brand-dot"></span>
-            <span class="brand-name">Bhoomika G</span>
+    <header class="topbar">
+        <div class="topbar-inner">
+            <div class="brand">
+                <span class="brand-dot"></span>
+                <span class="brand-name">Bhoomika G</span>
+            </div>
+            <nav class="nav">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
         </div>
-        <nav class="nav">
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </div>
-</header>
+    </header>
 
-<main>
+    <main>
+        <!-- HERO -->
+        <section class="hero">
+            <div class="hero-inner">
+                <!-- Left -->
+                <div class="hero-left">
+                    <p class="hero-kicker">Software Test Engineer</p>
+                    <h1 class="hero-title">
+                        Testing web applications<br>
+                        with a developer's mindset.
+                    </h1>
+                    <p class="hero-text">
+                        BCA graduate from Bangalore University with strong manual testing skills,
+                        growing Java & Selenium automation skills, and hands-on experience across
+                        e‑commerce and banking projects.
+                    </p>
 
-    <!-- HERO (split layout) -->
-    <section class="hero">
-        <div class="hero-inner">
-            <!-- Left -->
-            <div class="hero-left">
-                <p class="hero-kicker">Software Test Engineer</p>
-                <h1 class="hero-title">
-                    Testing web applications<br>
-                    with a developer’s mindset.
-                </h1>
-                <p class="hero-text">
-                    BCA graduate from Bangalore University with strong manual testing skills,
-                    growing Java &amp; Selenium automation skills, and hands-on experience across
-                    e‑commerce and banking projects.
-                </p>
+                    <div class="hero-tags">
+                        <span class="tag">Manual & Automation Testing</span>
+                        <span class="tag">Selenium WebDriver</span>
+                        <span class="tag">SQL</span>
+                        <span class="tag">E‑commerce & Banking</span>
+                    </div>
 
-                <div class="hero-tags">
-                    <span class="tag">Manual &amp; Automation Testing</span>
-                    <span class="tag">Selenium WebDriver</span>
-                    <span class="tag">SQL</span>
-                    <span class="tag">E‑commerce &amp; Banking</span>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">
+                            <i class="fas fa-folder-tree"></i> View QA Projects
+                        </a>
+                        <a href="Bhoomika_G_resume.pdf" class="btn btn-ghost" download>
+                            <i class="fas fa-download"></i> Download Resume
+                        </a>
+                    </div>
+
+                    <div class="hero-metrics">
+                        <div class="metric">
+                            <span class="metric-number">2,000+</span>
+                            <span class="metric-label">Test Scenarios</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-number">200+</span>
+                            <span class="metric-label">Test Cases</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-number">50+</span>
+                            <span class="metric-label">Defects Logged</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="hero-actions">
-                    <a href="#projects" class="btn btn-primary">
-                        <i class="fas fa-folder-tree"></i> View QA Projects
+                <!-- Right: Larger profile -->
+                <div class="hero-right">
+                    <div class="app-window app-window-profile">
+                        <div class="app-body app-body-center">
+                            <div class="app-photo app-photo-xlarge">
+                                <img src="profile.jpg.jpeg" alt="Bhoomika G">
+                            </div>
+                            <div class="app-info app-info-center">
+                                <p class="app-name">Bhoomika G</p>
+                                <p class="app-role">Software Test Engineer</p>
+                                <p class="app-caption">Manual & Automation • Selenium • SQL</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="section section-about">
+            <div class="section-inner two-cols">
+                <div>
+                    <h2>About Me</h2>
+                    <p>
+                        Software Test Engineer with a BCA from Bangalore University, strong fundamentals in
+                        manual testing, and a solid foundation in Java and Selenium automation.
+                    </p>
+                    <p>
+                        Gained hands-on experience through multiple web application projects, where I designed
+                        over 2,000 test scenarios, authored 200+ detailed test cases, and reported 50+ defects
+                        with clear steps, severity, and priority. Currently focused on strengthening automation
+                        skills while continuing to apply structured manual testing techniques to deliver
+                        reliable, high-quality software.
+                    </p>
+                </div>
+                <div class="about-highlights">
+                    <div class="highlight">
+                        <i class="fas fa-bug"></i>
+                        <div>
+                            <h3>Testing Mindset</h3>
+                            <p>Strong focus on edge cases, negative testing, and clear defect communication.</p>
+                        </div>
+                    </div>
+                    <div class="highlight">
+                        <i class="fas fa-robot"></i>
+                        <div>
+                            <h3>Growing Automation</h3>
+                            <p>Building Selenium WebDriver skills in Java along with page interaction patterns.</p>
+                        </div>
+                    </div>
+                    <div class="highlight">
+                        <i class="fas fa-diagram-project"></i>
+                        <div>
+                            <h3>Project Ownership</h3>
+                            <p>Comfortable owning test design, execution, and reporting for end‑to‑end flows.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section id="skills" class="section section-skills">
+            <div class="section-inner">
+                <h2>Skills & Tools</h2>
+                <div class="skill-groups">
+                    <div class="skill-card">
+                        <h3>Testing</h3>
+                        <ul>
+                            <li>Test case and scenario design</li>
+                            <li>Functional, regression, and re‑testing</li>
+                            <li>STLC, defect lifecycle</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Automation & Code</h3>
+                        <ul>
+                            <li>Java basics for automation</li>
+                            <li>Selenium WebDriver, locators, waits</li>
+                            <li>Understanding of page interactions</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Data & Tools</h3>
+                        <ul>
+                            <li>SQL for data validation</li>
+                            <li>Jira-style bug reporting</li>
+                            <li>Git/GitHub, Excel / Google Sheets</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="projects" class="section section-projects">
+            <div class="section-inner">
+                <h2>Testing Projects</h2>
+                <div class="project-grid">
+                    <!-- ShopperStack -->
+                    <article class="project-card">
+                        <header>
+                            <span class="pill pill-green">E‑commerce</span>
+                            <h3>ShopperStack – Manual Testing</h3>
+                            <p class="project-subtitle">End‑to‑end web testing for Admin, Merchant, and Shopper flows.</p>
+                        </header>
+                        <ul>
+                            <li>Prepared requirement analysis and test plan for core e‑commerce modules.</li>
+                            <li>Designed 2,000+ test scenarios and 200+ detailed test cases for signup, login, product search, cart, and orders.</li>
+                            <li>Logged 50+ defects with severity, priority, and evidence; supported re‑testing until closure.</li>
+                        </ul>
+                        <footer>
+                            <a href="https://github.com/BhoomikaG37/ShoppersStack" target="_blank" class="link-inline">
+                                <i class="fab fa-github"></i> GitHub Repo
+                            </a>
+                            <span class="dot-sep">•</span>
+                            <a href="https://github.com/BhoomikaG37/ShoppersStack" target="_blank" class="link-inline">
+                                Test Docs
+                            </a>
+                        </footer>
+                    </article>
+
+                    <!-- QBank -->
+                    <article class="project-card">
+                        <header>
+                            <span class="pill pill-blue">Banking</span>
+                            <h3>QBank – Online Banking Testing</h3>
+                            <p class="project-subtitle">Customer and manager modules with realistic banking workflows.</p>
+                        </header>
+                        <ul>
+                            <li>Executed functional and regression tests for account creation, transfers, approvals, and statements.</li>
+                            <li>Created structured test scenarios and test cases focusing on data validation and security‑relevant checks.</li>
+                            <li>Documented defects with clear reproduction steps, expected vs actual behaviour, and retest results.</li>
+                        </ul>
+                        <footer>
+                            <span class="coming-soon">GitHub repo coming soon</span>
+                        </footer>
+                    </article>
+
+                    <!-- Fitness Tracking -->
+                    <article class="project-card">
+                        <header>
+                            <span class="pill pill-purple">MERN</span>
+                            <h3>Fitness Tracking System</h3>
+                            <p class="project-subtitle">Academic MERN project tested from a QA + developer view.</p>
+                        </header>
+                        <ul>
+                            <li>Validated user registration, workout logging, and progress dashboards across the UI.</li>
+                            <li>Designed basic API and UI scenarios to ensure consistent data flow between frontend and backend.</li>
+                            <li>Used this project to bridge development knowledge with strong testing discipline.</li>
+                        </ul>
+                        <footer>
+                            <a href="#" class="link-inline">
+                                <i class="fab fa-github"></i> GitHub Repo
+                            </a>
+                        </footer>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="section section-contact">
+            <div class="section-inner contact-inner">
+                <div>
+                    <h2>Let's Connect</h2>
+                    <p>
+                        Open to Software Test Engineer / QA roles where I can design tests, find meaningful
+                        defects, and grow in automation alongside experienced teams.
+                    </p>
+                    <p class="contact-line">
+                        <i class="fas fa-location-dot"></i> Bengaluru, India
+                    </p>
+                    <p class="contact-line">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:bhoomikagangadhar0@gmail.com">bhoomikagangadhar0@gmail.com</a>
+                    </p>
+                    <p class="contact-line">
+                        <i class="fas fa-phone"></i> +91 8123073114
+                    </p>
+                </div>
+                <div class="contact-actions">
+                    <a href="https://linkedin.com/in/bhoomikag37" target="_blank" class="btn btn-primary wide">
+                        <i class="fab fa-linkedin"></i> LinkedIn Profile
                     </a>
-                    <a href="Bhoomika_G_resume.pdf" class="btn btn-ghost" download>
-                        <i class="fas fa-download"></i> Download Resume
+                    <a href="https://github.com/BhoomikaG37" target="_blank" class="btn btn-ghost wide">
+                        <i class="fab fa-github"></i> GitHub Profile
                     </a>
                 </div>
-
-                <div class="hero-metrics">
-                    <div class="metric">
-                        <span class="metric-number">2,000+</span>
-                        <span class="metric-label">Test Scenarios</span>
-                    </div>
-                    <div class="metric">
-                        <span class="metric-number">200+</span>
-                        <span class="metric-label">Test Cases</span>
-                    </div>
-                    <div class="metric">
-                        <span class="metric-number">50+</span>
-                        <span class="metric-label">Defects Logged</span>
-                    </div>
-                </div>
             </div>
+        </section>
+    </main>
 
-            <!-- Right: application-style panel -->
-           <div class="hero-right">
-    <div class="app-window app-window-simple">
-        <div class="app-body app-body-center">
-            <div class="app-photo app-photo-large">
-                <img src="profile.jpg.jpeg" alt="Bhoomika G">
-            </div>
-            <div class="app-info app-info-center">
-                <p class="app-name">Bhoomika G</p>
-                <p class="app-role">Software Test Engineer</p>
-                <p class="app-caption">Manual &amp; Automation Testing • Selenium • SQL</p>
-            </div>
-        </div>
-    </div>
-</div>
-    </section>
+    <footer class="footer">
+        © <span id="year"></span> Bhoomika G · Software Test Engineer
+    </footer>
 
-    <!-- ABOUT -->
-    <section id="about" class="section section-about">
-        <div class="section-inner two-cols">
-            <div>
-                <h2>About Me</h2>
-                <p>
-                    Software Test Engineer with a BCA from Bangalore University, strong fundamentals in
-                    manual testing, and a solid foundation in Java and Selenium automation.
-                </p>
-                <p>
-                    Gained hands-on experience through multiple web application projects, where I designed
-                    over 2,000 test scenarios, authored 200+ detailed test cases, and reported 50+ defects
-                    with clear steps, severity, and priority. Currently focused on strengthening automation
-                    skills while continuing to apply structured manual testing techniques to deliver
-                    reliable, high-quality software.
-                </p>
-            </div>
-            <div class="about-highlights">
-                <div class="highlight">
-                    <i class="fas fa-bug"></i>
-                    <div>
-                        <h3>Testing Mindset</h3>
-                        <p>Strong focus on edge cases, negative testing, and clear defect communication.</p>
-                    </div>
-                </div>
-                <div class="highlight">
-                    <i class="fas fa-robot"></i>
-                    <div>
-                        <h3>Growing Automation</h3>
-                        <p>Building Selenium WebDriver skills in Java along with page interaction patterns.</p>
-                    </div>
-                </div>
-                <div class="highlight">
-                    <i class="fas fa-diagram-project"></i>
-                    <div>
-                        <h3>Project Ownership</h3>
-                        <p>Comfortable owning test design, execution, and reporting for end‑to‑end flows.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills" class="section section-skills">
-        <div class="section-inner">
-            <h2>Skills &amp; Tools</h2>
-
-            <div class="skill-groups">
-                <div class="skill-card">
-                    <h3>Testing</h3>
-                    <ul>
-                        <li>Test case and scenario design</li>
-                        <li>Functional, regression, and re‑testing</li>
-                        <li>STLC, defect lifecycle</li>
-                    </ul>
-                </div>
-                <div class="skill-card">
-                    <h3>Automation &amp; Code</h3>
-                    <ul>
-                        <li>Java basics for automation</li>
-                        <li>Selenium WebDriver, locators, waits</li>
-                        <li>Understanding of page interactions</li>
-                    </ul>
-                </div>
-                <div class="skill-card">
-                    <h3>Data &amp; Tools</h3>
-                    <ul>
-                        <li>SQL for data validation</li>
-                        <li>Jira-style bug reporting</li>
-                        <li>Git/GitHub, Excel / Google Sheets</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects" class="section section-projects">
-        <div class="section-inner">
-            <h2>Testing Projects</h2>
-
-            <div class="project-grid">
-                <!-- ShopperStack -->
-                <article class="project-card">
-                    <header>
-                        <span class="pill pill-green">E‑commerce</span>
-                        <h3>ShopperStack – Manual Testing</h3>
-                        <p class="project-subtitle">End‑to‑end web testing for Admin, Merchant, and Shopper flows.</p>
-                    </header>
-                    <ul>
-                        <li>Prepared requirement analysis and test plan for core e‑commerce modules.</li>
-                        <li>Designed 2,000+ test scenarios and 200+ detailed test cases for signup, login, product search, cart, and orders.</li>
-                        <li>Logged 50+ defects with severity, priority, and evidence; supported re‑testing until closure.</li>
-                    </ul>
-                    <footer>
-                        <a href="https://github.com/BhoomikaG37/ShoppersStack" target="_blank" class="link-inline">
-                            <i class="fab fa-github"></i> GitHub Repo
-                        </a>
-                        <span class="dot-sep">•</span>
-                        <a href="https://github.com/BhoomikaG37/ShoppersStack" target="_blank" class="link-inline">
-                            Test Docs
-                        </a>
-                    </footer>
-                </article>
-
-                <!-- QBank -->
-                <article class="project-card">
-                    <header>
-                        <span class="pill pill-blue">Banking</span>
-                        <h3>QBank – Online Banking Testing</h3>
-                        <p class="project-subtitle">Customer and manager modules with realistic banking workflows.</p>
-                    </header>
-                    <ul>
-                        <li>Executed functional and regression tests for account creation, transfers, approvals, and statements.</li>
-                        <li>Created structured test scenarios and test cases focusing on data validation and security‑relevant checks.</li>
-                        <li>Documented defects with clear reproduction steps, expected vs actual behaviour, and retest results.</li>
-                    </ul>
-                    <footer>
-                        <span class="coming-soon">GitHub repo coming soon</span>
-                    </footer>
-                </article>
-
-                <!-- Fitness Tracking -->
-                <article class="project-card">
-                    <header>
-                        <span class="pill pill-purple">MERN</span>
-                        <h3>Fitness Tracking System</h3>
-                        <p class="project-subtitle">Academic MERN project tested from a QA + developer view.</p>
-                    </header>
-                    <ul>
-                        <li>Validated user registration, workout logging, and progress dashboards across the UI.</li>
-                        <li>Designed basic API and UI scenarios to ensure consistent data flow between frontend and backend.</li>
-                        <li>Used this project to bridge development knowledge with strong testing discipline.</li>
-                    </ul>
-                    <footer>
-                        <!-- replace # with actual repo -->
-                        <a href="#" class="link-inline">
-                            <i class="fab fa-github"></i> GitHub Repo
-                        </a>
-                    </footer>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section section-contact">
-        <div class="section-inner contact-inner">
-            <div>
-                <h2>Let’s Connect</h2>
-                <p>
-                    Open to Software Test Engineer / QA roles where I can design tests, find meaningful
-                    defects, and grow in automation alongside experienced teams.
-                </p>
-                <p class="contact-line">
-                    <i class="fas fa-location-dot"></i> Bengaluru, India
-                </p>
-                <p class="contact-line">
-                    <i class="fas fa-envelope"></i>
-                    <a href="mailto:bhoomikagangadhar0@gmail.com">bhoomikagangadhar0@gmail.com</a>
-                </p>
-                <p class="contact-line">
-                    <i class="fas fa-phone"></i> +91 8123073114
-                </p>
-            </div>
-            <div class="contact-actions">
-                <a href="https://linkedin.com/in/bhoomikag37" target="_blank" class="btn btn-primary wide">
-                    <i class="fab fa-linkedin"></i> LinkedIn Profile
-                </a>
-                <a href="https://github.com/BhoomikaG37" target="_blank" class="btn btn-ghost wide">
-                    <i class="fab fa-github"></i> GitHub Profile
-                </a>
-            </div>
-        </div>
-    </section>
-</main>
-
-<footer class="footer">
-    © <span id="year"></span> Bhoomika G · Software Test Engineer
-</footer>
-
-<script>
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            const id = this.getAttribute('href');
-            if (id.length > 1) {
-                e.preventDefault();
-                document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
-            }
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const id = this.getAttribute('href');
+                if (id.length > 1) {
+                    e.preventDefault();
+                    document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+                }
+            });
         });
-    });
 
-    document.getElementById('year').textContent = new Date().getFullYear();
-</script>
-
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
 
 
    
+
 
 
 
