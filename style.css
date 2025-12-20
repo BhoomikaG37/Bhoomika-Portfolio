@@ -78,8 +78,8 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
 }
+
 /* Centered glass card */
 .hero-card {
     max-width: 520px;
@@ -436,4 +436,5 @@ body {
         grid-template-columns: minmax(0,1fr);
     }
 }
+
 
